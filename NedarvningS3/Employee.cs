@@ -54,9 +54,9 @@ namespace NedarvningS3
             }
         }
 
-        public double GetPaymentAmount()
+        public virtual double GetPaymentAmount()
         {
-            throw new NotImplementedException();
+            return 0.0;
         }
     }
 }

@@ -1,8 +1,11 @@
 ﻿
+using System;
+
 namespace NedarvningS3
 {
     class CommissionEmployee : Employee
     {
+        //indtægt alene baseret på salg
         protected double grossSales;
         protected double commissionRate;
 
@@ -37,6 +40,10 @@ namespace NedarvningS3
             {
                 commissionRate = value;
             }
+        }
+        public override double GetPaymentAmount()
+        {
+            return grossSales * commissionRate;
         }
     }
 }

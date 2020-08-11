@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace NedarvningS3
 {
     class SalariedEmployee : Employee
@@ -22,6 +24,10 @@ namespace NedarvningS3
             {
                 weeklySalary = value;
             }
+        }
+        public override double GetPaymentAmount()
+        {
+            return weeklySalary;
         }
     }
 }

@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace NedarvningS3
 {
     class HourlyEmployee : Employee
@@ -37,6 +39,10 @@ namespace NedarvningS3
             {
                 hours = value;
             }
+        }
+        public override double GetPaymentAmount()
+        {
+            return wage * hours;
         }
     }
 }
